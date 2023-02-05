@@ -166,9 +166,7 @@ docker-compose up --build
 <br>
 
 ## 📹 [Demo]((https://www.youtube.com/watch?v=RCUEUDk4sVw)) 
-<div align="center">
-    [![Video Label](http://img.youtube.com/vi/nJmduw8adEg/0.jpg)](https://youtu.be/nJmduw8adEg)
-</div>
+[![Video Label](http://img.youtube.com/vi/nJmduw8adEg/0.jpg)](https://youtu.be/nJmduw8adEg)
 
 <br>
 <br>
