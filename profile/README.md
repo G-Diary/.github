@@ -12,7 +12,7 @@
 <p align="center">
 방학숙제로 그리던 그림일기를 G-Diary에 그리자! <br/>
 일기장과 그림은 내가 제공할게<br/>
-스토리는 누가 짤래?<br/>
+스토리는 누가 짤래?<br/>👩‍🎨
 </p>
 
 ## 🧐 Introduce
@@ -28,13 +28,13 @@
         </td>
         <td width="600" align="center">
             <div align="left">
-일기를 작성해 저장해보세요<br/>
-일기장에서 키워드를 추출해 그림일기에 사용할 그림을 제공합니다<br/>
-이 세상에 단 하나밖에 없는 그림 일기를 작성해보세요<br/><br/>
+일기를 작성해 저장해보세요.<br/>
+일기장에서 키워드를 추출해 그림일기에 사용할 그림을 제공합니다.<br/>
+이 세상에 단 하나밖에 없는 그림일기를 작성해보세요. 👩‍🎨 <br/><br/>
 
 <b>
     
-🔗 [www.gdiary.org](http://www.gdiary.org) <br>
+🔗 [www.gdiary.org](http://www.gdiary.org)<br>
     
 📓 [medium](https://medium.com/@dkfud2121/g-diary-3e90e87722a2)
     
@@ -56,13 +56,36 @@
 <br>
 <br>
 
-## 🎯 ERD
+
+
+## 🌈 Feature
 ---
-<img width="1212" alt="image" src="https://user-images.githubusercontent.com/101381901/216731058-2d32d322-e90b-470d-8cdc-481dd30c11e6.png">
+
+| 회원가입 | 로그인 |
+| :------------: | :-------------: |
+| <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/229361241-371da87f-867f-4557-8f9b-573e99d08447.gif"> | <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/216731251-d66ed03a-7ba0-48bc-b101-04b468f17c6c.gif"> |
+|JWT 토큰을 이용하여 회원가입을 구현했습니다. |
+
+| 작성방법 | 커버사진 변경 및 시작 |
+| :------------: | :-------------: |
+| <img width="500" alt="image" src="https://user-images.githubusercontent.com/101381901/216731261-319b0159-f066-4747-884b-b9168463055f.png"> | <img width="500" alt="image" src="https://user-images.githubusercontent.com/101381901/216731286-10efe23c-9591-40d6-affd-e3bee4c5547a.gif"> |
+
+| 일기작성 | 캘린더로 일기 조회 |
+| :------------: | :-------------: |
+| <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/216731234-23cc91b4-1400-487a-b76c-25806416bb57.gif"> |  <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/216731257-23c1fe92-95cf-4a02-b727-f3914af8c9f5.gif"> |
+| 일기를 작성하고 <그림가져오기> 를 누릅니다. <br>AI 로 키워드를 추출하여 이미지가 출력됩니다. <br>그림을 선택하거나 <그림그리기> 로 그림을 직접 그립니다. | 
+
+
 <br>
 <br>
 <br>
 
+## 📹 [Demo]((https://www.youtube.com/watch?v=RCUEUDk4sVw)) 
+[![Video Label](http://img.youtube.com/vi/nJmduw8adEg/0.jpg)](https://youtu.be/nJmduw8adEg)
+
+<br>
+<br>
+<br>
 
 ## 💻 Tech Stack
 ---
@@ -125,49 +148,122 @@
 <br>
 <br>
 
+## 🎯 ERD
+---
+<img width="1212" alt="image" src="https://user-images.githubusercontent.com/101381901/216731058-2d32d322-e90b-470d-8cdc-481dd30c11e6.png">
+<br>
+<br>
+<br>
+
+## 📕 API
+---
+<img width="1212" alt="image" src="https://user-images.githubusercontent.com/101381901/229366236-61dd9c49-2af2-4475-9b44-b9fc6f0f80c4.png"><br>
+
+- api/v1/auth : 사용자 정보 확인, 로그인, 로그아웃
+- api/v1/users : 사용자 커버 이미지 변경 
+- api/v1/results : 결과 키워드 별 이미지 조회
+- api/v1/text/ : 일기내용 키워드 추출 (AI)
+- api/v1/join : 회원가입
+- api/v1/diaries : 일기 목록 조회, 등록, 조회
+<br>
+<br>
+<br>
+
+## 🖥 Monitoring
+---
+| node exporter | Django |
+| :------------: | :-------------: |
+| <img width="600" alt="image" src="https://user-images.githubusercontent.com/101381901/229364462-cd6923ec-37cf-45f1-9ea3-dea7ff1091b0.png"> | <img width="600" alt="image" src="https://user-images.githubusercontent.com/101381901/229364485-faa2ea13-0618-4ee3-9477-63fba291c283.png">  |
+
+<br>
+<br>
+<br>
+
 ## 🐳 How to start
 ---
+### 1. clone the repository
 ```
 git clone https://github.com/2023-SV-winter-bootcamp-G-Diary/G-Diary.git
-docker-compose up --build
 ```
 <br>
 <br>
+
+### 2. Set environment file <br>
+
+Path: G-Diary/backend/config/my_settings.py<br>
+Django secret key & MySQL 환경변수 & S3 bucket 
+```
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+MY_SECRET = {
+    "SECRET_KEY" : ''
+}
+
+MY_DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME' : '', 
+        'USER' : '',
+        'PASSWORD' : '', 
+        'HOST': '', 
+        'PORT': '3306', 
+        'OPTIONS':{
+            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
+}
+
+MY_AWS_ACCESS_KEY_ID = {
+    "AWS_ACCESS_KEY_ID" :''
+}
+MY_AWS_ACCESS_ACCESS_KEY = {
+    "AWS_SECRET_ACCESS_KEY" : ""
+}
+MY_STORAGE_BUCKET_NAME = {
+    "BUCKET_NAME" : ""
+}
+```
+<br>
+Path: /G-Diary/backend/.env
+MySQL container 환경 변수 & RabbitMQ 환경변수
+
+```
+DEBUG=False
+MYSQL_DATABASE=
+MYSQL_ROOT_PASSWORD=
+MYSQL_PORT=3306
+TZ=Asia/Seoul
+RABBITMQ_HOST=
+RABBITMQ_USER=
+RABBITMQ_PASSWORD=
+RABBITMQ_VHOST=
+```
+<br>
+Path: /G-Diary/frontend/.env.local <br>
+카카오톡 공유하기 환경변수 (현재 로컬에서만 가능)
+
+```
+REACT_APP_KAKAO_KEY=''
+```
+<br>
+Path: /G-Diary/.env <br>
+RabbitMQ 환경변수
+
+```
+RABBITMQ_HOST=
+RABBITMQ_USER=
+RABBITMQ_PASSWORD=
+RABBITMQ_VHOST=
+```
+<br>
 <br>
 
-## 🌈 Feature
----
-### JWT를 이용한 회원가입, 로그인 <br>
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731234-23cc91b4-1400-487a-b76c-25806416bb57.gif">
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731251-d66ed03a-7ba0-48bc-b101-04b468f17c6c.gif">
-<br>
-<br>
-
-### 커버사진 변경 및 시작 <br>
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731286-10efe23c-9591-40d6-affd-e3bee4c5547a.gif">
-<br>
-<br>
-
-### ✍🏻 일기작성 <br>
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731234-23cc91b4-1400-487a-b76c-25806416bb57.gif">
-<br>
-<br>
-
-### 캘린더로 일기 조회 <br>
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731257-23c1fe92-95cf-4a02-b727-f3914af8c9f5.gif">
-<br>
-<br>
-
-### 작성방법 및 소개 <br>
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731261-319b0159-f066-4747-884b-b9168463055f.png">
-
-<br>
-<br>
-<br>
-
-## 📹 [Demo]((https://www.youtube.com/watch?v=RCUEUDk4sVw)) 
-[![Video Label](http://img.youtube.com/vi/nJmduw8adEg/0.jpg)](https://youtu.be/nJmduw8adEg)
-
+### 3. Run
+```
+docker-compose -f docker-compose.prod.yml up --build
+```
 <br>
 <br>
 <br>
