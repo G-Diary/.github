@@ -12,7 +12,7 @@
 <p align="center">
 방학숙제로 그리던 그림일기를 G-Diary에 그리자! <br/>
 일기장과 그림은 내가 제공할게<br/>
-스토리는 누가 짤래?<br/>👩‍🎨
+스토리는 누가 짤래?<br/>
 </p>
 
 ## 🧐 Introduce
@@ -28,9 +28,9 @@
         </td>
         <td width="600" align="center">
             <div align="left">
-일기를 작성해 저장해보세요.<br/>
-일기장에서 키워드를 추출해 그림일기에 사용할 그림을 제공합니다.<br/>
-이 세상에 단 하나밖에 없는 그림일기를 작성해보세요. 👩‍🎨 <br/><br/>
+일기를 작성해 저장해보세요<br/>
+일기장에서 키워드를 추출해 그림일기에 사용할 그림을 제공합니다<br/>
+이 세상에 단 하나밖에 없는 그림 일기를 작성해보세요<br/><br/>
 
 <b>
     
@@ -60,21 +60,30 @@
 
 ## 🌈 Feature
 ---
+### JWT를 이용한 회원가입, 로그인 <br>
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/229361241-371da87f-867f-4557-8f9b-573e99d08447.gif">
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731251-d66ed03a-7ba0-48bc-b101-04b468f17c6c.gif">
+<br>
+<br>
 
-| 회원가입 | 로그인 |
-| :------------: | :-------------: |
-| <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/229361241-371da87f-867f-4557-8f9b-573e99d08447.gif"> | <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/216731251-d66ed03a-7ba0-48bc-b101-04b468f17c6c.gif"> |
-|JWT 토큰을 이용하여 회원가입을 구현했습니다. |
+### 커버사진 변경 및 시작 <br>
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731286-10efe23c-9591-40d6-affd-e3bee4c5547a.gif">
+<br>
+<br>
 
-| 작성방법 | 커버사진 변경 및 시작 |
-| :------------: | :-------------: |
-| <img width="500" alt="image" src="https://user-images.githubusercontent.com/101381901/216731261-319b0159-f066-4747-884b-b9168463055f.png"> | <img width="500" alt="image" src="https://user-images.githubusercontent.com/101381901/216731286-10efe23c-9591-40d6-affd-e3bee4c5547a.gif"> |
+### 일기작성 <br>
+일기를 작성하고 <그림가져오기> 를 누릅니다. AI 로 키워드를 추출하여 이미지를 출력됩니다. <br> 그림을 선택하거나 <그림그리기>로 직접 그릴 수 있습니다.  
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731234-23cc91b4-1400-487a-b76c-25806416bb57.gif">
+<br>
+<br>
 
-| 일기작성 | 캘린더로 일기 조회 |
-| :------------: | :-------------: |
-| <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/216731234-23cc91b4-1400-487a-b76c-25806416bb57.gif"> |  <img width="478" alt="image" src="https://user-images.githubusercontent.com/101381901/216731257-23c1fe92-95cf-4a02-b727-f3914af8c9f5.gif"> |
-| 일기를 작성하고 <그림가져오기> 를 누릅니다. <br>AI 로 키워드를 추출하여 이미지가 출력됩니다. <br>그림을 선택하거나 <그림그리기> 로 그림을 직접 그립니다. | 
+### 캘린더로 일기 조회 <br>
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731257-23c1fe92-95cf-4a02-b727-f3914af8c9f5.gif">
+<br>
+<br>
 
+### 작성방법 및 소개 <br>
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/101381901/216731261-319b0159-f066-4747-884b-b9168463055f.png">
 
 <br>
 <br>
@@ -169,7 +178,7 @@
 <br>
 <br>
 
-## 🖥 Monitoring
+## Monitoring
 ---
 | node exporter | Django |
 | :------------: | :-------------: |
